@@ -1,0 +1,450 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>TBB Webseite</title>
+<link rel="stylesheet" href="tbb.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  background: #f1f1f1;
+  box-sizing: border-box;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: #404040;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+
+#myBtn:hover {
+  background-color: #f1f1f1;
+}
+
+body {
+  font-family: Luminari;
+  font-size: 20px;
+}
+
+/* Style the header */
+header {
+  
+  padding: 30px;
+  background-color: #404040;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-bottom: 50px;
+  font-family: Luminari;
+  
+}
+
+.Dropdown-container {
+	list-style-type: none;
+	background-color: #404040;
+	overflow: hidden;
+    font-size: 30px; 
+    margin-left:85%
+    
+}
+
+li a , .Dropdownbtn{
+  display: inline-block;
+  background-color: #404040;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .Dropdown:hover .Dropdownbtn {
+  background-color: red;
+}
+
+li.Dropdown {
+  display: inline-block;
+  background-color: #404040;
+}
+
+.Dropdown-content  {
+  display: none;
+  background-color: #404040;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.Dropdown-content a {
+  color: white;
+  background-color: #404040;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.Dropdown-content a:hover {
+}
+
+.Dropdown:hover .Dropdown-content {
+  display: block;
+}
+
+
+.Button {
+	width: 40%;
+	height: 50px;
+	background-color: #404040;
+	color : white;
+	display: block; 
+	margin : 15px;
+	font-size: 25px;
+	font-family: Luminari;
+}
+
+
+.Button:hover {
+	background-color: #f1f1f1;
+}
+
+.Img{
+	display: block;
+	border-radius: 15px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  /*height: 600px;*/ /* only for demonstration, should be removed */
+  background: #f1f1f1;
+  padding: 20px;
+ 
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+#sv,#sk,#po,#co {
+	display : none;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+ /* height: 600px;*/ /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #404040;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  font-family: ui-rounded;
+  width: 100%;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+ 
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2 style="background-color: #404040;">WILLKOMMEN AUF TBB WEBSEITE</h2>
+
+
+  <ul class="Dropdown-container"> 
+  	<li class ="Dropdown" > 
+  		<a class ="Dropdownbtn" href="#">Sprache &rsaquo; </a>
+  		<div class="Dropdown-content">
+  			<a href="index.html"> deutsch </a>
+  			<a href="index-fr.html">französisch</a>
+  			<a href="index-en.html">englisch</a>
+  	    </div>
+  	 </li>
+
+  </ul>
+</header>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+
+<section>
+  <nav>
+    <ul>
+      <li> <button class="Button" type="button" onclick="myUb()">Über mich</button></li>
+      <li> <button class="Button" type="button" onclick="mySv()">Services</button></li>
+      <li> <button class="Button" type="button" onclick="mySk()">Skills</button></li>
+      <li> <button class="Button" type="button" onclick="myPo()">Portfolio</button></li>
+      <li> <button class="Button" type="button" onclick="myCo()">Contact</button></li>
+     
+
+    </ul>
+  </nav>
+  
+  <article>
+  	<div id="ub">
+    <h2 sytle="font-size: 50px; font-family: Areal;">Über mich</h2>
+    <img class="Img" src="profil1.jpeg" height="350px" width="350px"> 
+    <p>Ich habe nicht zu viel von mir zu sagen . Ich lasse Dich lieber mich kennenzulernen und Deine eigene Meinung von mir zu haben &#128512;.Aber wenn es um die Arbeit geht , kann ich sagen , dass ich Zielorientiert bin. Ich arbeite hart um das Ziel zu erreichen egal was für Schwierigkeiten es gibt , ich gebe immer mein besten um die optimale Lösung zu finden.</p>
+    </div>
+     	
+    <div id="sv">
+    	<h2>Services</h2>
+    	<h1>Ich biete an :</h1>
+    	<dl>
+  			<dt> <strong> Datenbankdesign-Services : </strong></dt> <br>
+  			<dd>ausgehend von einer Anforderungsanalyse erstelle ich ein konzeptionelles Modell einer Datenbank. Ich definiere sorgfältig den Inhalt und die Struktur von Datenbanken.</dd><br> <br>
+  			<dt> <strong> Datenbankadministrator-Services :</strong></dt><br>
+  			<dd>Ich bin in der Lage Datenbanksystem im täglichen Betrieb zu verwalten.</dd> <br><br>
+  			<dt> <strong>Full-Stack Webentwicklungsservices : </strong></dt><br>
+  			<dd>Ich gestalte Webseite nach Anforderung der Kunden. Ich gehe Punkt -zu- Punkt gemeinsam mit der Kunde unter Beachtung der SEO-Analyse für die perfekte Optiemierung des Rankings der Webseite durch Google Roboter.Außerdem gestalte ich die Webseite Responsiv nach Wunsch des Auftragsgeber.</dd>
+  			<dd>ich kann sowohl statische Webseite als auch dynamische Webseite mit Hilfe von PHP aufbauen.</dd><br><br>
+  			<dt> <strong> Webdesign-Services : </strong></dt><br>
+  			<dd>Ich verwende Adobe-Cloud um Flyers, Poster , Visiten-Karte und Co zu erstellen.</dd><br><br><br>
+
+
+
+
+		</dl>
+    </div>
+
+    <div id="sk">
+    <h2>Skills</h2>
+    <h1> Im Bereich Front-End </h1>
+    <p> HTML5</p>
+    <p> CSS3</p>
+    <p> Javascript</p>
+
+    <h1> Im Bereich Back-End </h1>
+    <p> JAVA</p>
+    <p> C/C++</p>
+    <p> PHP7</p>
+
+     <h1> Im Bereich Datenbanken</h1>
+    <p> Postgresql</p>
+    <p> Mysql server</p>
+    <p> Phpmyadmin</p>
+    <p> Pgadmin</p>
+    <p> MariaDB</p>
+    <p> Java DataBase Connectivity (JDBC)</p>
+    <p>Open DataBase Connectivity (ODBC) </p>
+
+    <h1> Im Bereich Rechnernetze </h1>
+    <p>  Wireshark für die Analyse von Netzwerkmitschnitten</p>
+
+
+    </div>
+
+   	<div id="po">
+   		<h2>Portfolio </h2>
+        <h1> Praktikum im Bereich Rechnernetze während des Studiums (Bergische Üniversität Wuppertal)</h1>
+    <p>  Verteiltes rechnen mit openMPI</p>
+    <ul>
+    	
+    	<li> <strong> Lernziele </strong> </li>
+    		<ul>
+    			<li> Praktische Anwendung von verteiltes Rechnen.</li>
+    			<li> Unterscheidung verschiedener Möglichkeiten zur Loop-Distribution.</li>
+    			<li> Anwendung von direkten Send- vs. Broadcast-Befehlen.</li>
+    			<li> Grundkenntnisse im Umgang mit Linux bzw. der Linux Shell</li>
+    		</ul>
+
+    	
+    </ul>
+
+   <p> Socket-Programmierung in C </p>
+        <ul>
+    	
+    	<li> <strong> Lernziele </strong> </li>
+    		<ul>
+    			<li> Verständnis der Funktionsweise für Netzwerk- und Interprozesskommunikation.</li>
+    			<li> Planung und Entwicklung von Client-Server Programmen mit Sockets</li>
+    			<li> Kenntnisse über die Eigenschaften und den Einsatz von stream- und datagrammbasierter Kommunikation zum Nachrichtenaustausch zwischen Client- und Server-Programmen.</li>
+    		</ul>
+    	
+    </ul>
+
+       <p> Grundlagen der Netzwerkanalyse</p>
+        <ul>
+    	
+    	<li> <strong> Lernziele </strong> </li>
+    		<ul>
+    			<li> Nachvollziehen von einfachen Netzwerkanalysen.</li>
+    			<li> Grundlegende Analyse von Netzwerkmitschnitten</li>
+    			<li> Benutzung einiger beispielhafter Werkzeuge zur Netzwerkanalyse</li>
+    		</ul>
+    	
+    </ul>
+
+
+            <h1> Praktikum im Bereich Softwaretechnologie während des Studiums (Bergische Üniversität Wuppertal)</h1>
+    <p> Programmierung des Spiels Digger </p>
+    <ul>
+    	
+    	<li> <strong> Lernziele </strong> </li>
+    		<ul>
+    			<li> Praktische Anwendung der Programmiersprache Java mit java Swing und Java-FX. </li>
+    			<li> Netzwerkprogrammierung mit dem Protokoll TCP/IP</li>
+    			<li> Entwurf von Prototypen , Projekt Kalkulation ,Durchfürbarkeitsstudie des Projekts</li>
+    			<li> Erstellung von Lastenheft, Pflichtenheft , Glossar , Benutzerhandbuch</li>
+    			<li> Anwendung von Reverse Engineering-Tools (Visual-Paradigm) für die Erstellung von Klassen-Diagram und Co </li>
+    			<li> OO-Analyse</li>
+
+    		</ul>
+
+    		<p> mehr dazu siehe  <a href="https://github.com/Freeddy-Djiotsop/Abgabe-Digger-Guppe8/tree/main/src/digger"> Link zu Softwaretechnologie Projekt </a></p>  
+
+    	
+    </ul>
+    </div>
+
+   	<div id="co">
+    <h2>Contact</h2>
+    <p>um mich zu kontaktieren, brauhst Du einfach dieses Formular auszufüllen und ich beantworte deine Frage schnell wie möglich, sobald ich die Nachricht gelesen habe.</p> <br><br>
+
+  <form action="">
+  <fieldset style="font-size: 30px; width: 100%; border: 3px solid #404040;">
+  	<legend> Formular</legend>
+  <label style="font-size: 30px;" for="name">Name:</label><br>
+  <input style="font-size: 15; width: 50%; border: 2px solid #404040;"type="text" id="name" placeholder="Schreib dein Name......" required value=""><br><br>
+  <label style="font-size: 30px;" for="vorname">Vorname:</label><br>
+  <input style="font-size: 15; width: 50%; border: 2px solid #404040;" type="text" id="vorname" placeholder="Schreib dein Vorame......." required value=""><br><br>
+  <label style="font-size: 30px;" for="nummer">Tel:</label><br>
+  <input style="font-size: 15px; width: 50%; border: 2px solid #404040;" type="tel" id="nummer" placeholder="Schreib deine Nummer......."  value=""><br><br>
+  <label style="font-size: 30px;" for="email">E-Mail:</label><br>
+  <input style="font-size: 15; width: 50%; border: 2px solid #404040;" type="tel" id="email" placeholder="Schreib deine E-Mail......." required value=""><br><br>
+  <label style="font-size: 30px;" for="files">Dateien auswählen:</label> <br>
+  <input type="file" id="files" name="files" multiple> <br><br>
+  <label style="font-size: 30px;" for="comment">Dein Kommentar:</label><br>
+  <textarea style="font-size: 15px; width: 50%; border: 2px solid #404040;" id="comment" name="comment" rows="4" cols="50"           placeholder="Schreib deine Nachricht........"> </textarea> <br><br>
+  <input  style="font-size: 30px; background-color: black; color: white; "type="reset" value="Zurücksetzen">
+  <input  style="font-size: 30px; background-color: black; color: white;" type="submit" value="Abschicken">
+  </fieldset>
+</form> 
+    </div>
+
+  </article>
+
+      <script>
+function myUb() {
+  var x = document.getElementById("ub");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+   /* x.style.display = "none";*/
+    
+  }
+}
+
+function mySv() {
+  var x = document.getElementById("sv");
+  var y = document.getElementById("ub"); 
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+}
+
+function mySk() {
+  var x = document.getElementById("sk");
+  var y = document.getElementById("ub");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+}
+
+function myPo() {
+  var x = document.getElementById("po");
+  var y = document.getElementById("ub");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+
+  }
+}
+
+function myCo() {
+  var x = document.getElementById("co");
+  var y = document.getElementById("ub");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+
+  }
+}
+
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+</script>
+</section>
+
+<footer>
+  <p style="background-color: #404040;">&copy; TBB</p>
+</footer>
+</body>
+</html>
